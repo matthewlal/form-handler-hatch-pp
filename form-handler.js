@@ -93,7 +93,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         } else {
           document.getElementById("thankyou_message_not_isEmailOnly").style.display = "block";
         }
-        document.getElementById("thankyou_message_name").innerHTML = data["first-name"];
+        Array.prototype.forEach.call(document.getElementsByClassName("thankyou_message_name"), function(element) {
+          element.innerHTML = data["first-name"];
+        });
         var thankYouMessage = document.getElementById("thankyou_message");
         if (thankYouMessage) {
           thankYouMessage.style.display = "block";
