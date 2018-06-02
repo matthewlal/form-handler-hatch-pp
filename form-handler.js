@@ -87,6 +87,12 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         console.log( xhr.status, xhr.statusText )
         console.log(xhr.responseText);
         document.getElementById("gform").style.display = "none"; // hide form
+        var isEmailOnly = data.email-only;
+        if(isEmailOnly === "true"){
+          document.getElementById("thankyou_message_isEmailOnly").style.display = "block";
+        } else {
+          document.getElementById("thankyou_message_not_isEmailOnly").style.display = "block";
+        }
         var thankYouMessage = document.getElementById("thankyou_message");
         if (thankYouMessage) {
           thankYouMessage.style.display = "block";
