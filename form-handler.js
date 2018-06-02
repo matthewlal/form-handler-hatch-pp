@@ -20,8 +20,9 @@ event.preventDefault();
     }
     return;
   };
-  var encoded = Object.keys(data).map(function(k) {
-    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
-  }).join('&');
-  xhr.send(encoded);
+  //var encoded = Object.keys(data).map(function(k) {
+    //return encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
+  //}).join('&');
+  //xhr.send(encoded);
+  xhr.send();
 }
