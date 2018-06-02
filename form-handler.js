@@ -87,7 +87,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         console.log( xhr.status, xhr.statusText )
         console.log(xhr.responseText);
         document.getElementById("gform").style.display = "none"; // hide form
-        var isEmailOnly = data.email-only;
+        var isEmailOnly = data["email-only"];
         if(isEmailOnly === "true"){
           document.getElementById("thankyou_message_isEmailOnly").style.display = "block";
         } else {
