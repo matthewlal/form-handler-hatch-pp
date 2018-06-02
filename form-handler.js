@@ -12,7 +12,7 @@ event.preventDefault();
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function() {
     console.log(xhr.status, xhr.statusText)
-    console.log(xhr.responseText);  */
+    console.log(xhr.responseText);  
     document.getElementById("gform").style.display = "none"; // hide form
     var thankYouMessage = document.getElementById("thankyou_message");
     if (thankYouMessage) {
