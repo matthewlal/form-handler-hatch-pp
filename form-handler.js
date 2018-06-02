@@ -5,7 +5,8 @@ function loaded() {
 document.addEventListener("DOMContentLoaded", loaded, false);
 
 function handleFormSubmit(event) {
-/**  event.preventDefault(); 
+event.preventDefault(); 
+  /**  
   var url = event.target.action;
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
