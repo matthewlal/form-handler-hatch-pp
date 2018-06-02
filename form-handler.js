@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", loaded, false);
 
 function handleFormSubmit(event) {
 event.preventDefault(); 
-  /**  
   var url = event.target.action;
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url);
@@ -20,9 +19,9 @@ event.preventDefault();
       thankYouMessage.style.display = "block";
     }
     return;
-  /**};
+  };
   var encoded = Object.keys(data).map(function(k) {
     return encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
   }).join('&');
-  xhr.send(encoded); */
+  xhr.send(encoded);
 }
