@@ -90,7 +90,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         var isEmailOnly = data["email-only"];
         if(isEmailOnly === "true"){
           document.getElementById("thankyou_message_isEmailOnly").style.display = "block";
-        } else {
+        } else if(isEmailOnly === "false"){
           document.getElementById("thankyou_message_not_isEmailOnly").style.display = "block";
         }
         Array.prototype.forEach.call(document.getElementsByClassName("thankyou_message_name"), function(element) {
