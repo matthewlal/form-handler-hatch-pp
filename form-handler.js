@@ -120,9 +120,9 @@ function handleEmailOnlyCheckBox() {
   
   var submitText = document.getElementById("submit-button");
   if(isChecked === true) {
-    submitText.innerHTML = "Subscribe";
+    submitText.innerHTML = "Subscribe <i class="zmdi zmdi-arrow-right m-l-8"></i>";
   } else {
-    submitText.innerHTML = "Join";
+    submitText.innerHTML = "Join <i class="zmdi zmdi-arrow-right m-l-8"></i>";
   }
 }
 
@@ -135,7 +135,3 @@ function loaded() {
   emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
-
-window.onload = function(e) {
-  document.getElementById("warning").style.display = "none";
-}
