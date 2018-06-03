@@ -109,10 +109,33 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     xhr.send(encoded);
   }
 }
+
+function handleEmailOnlyCheckBox() {
+  var isChecked;
+  if(document.getElementById("email-only").checked === true) {
+    isChecked = true;
+  } else {
+    isChecked = false;
+  }
+  
+  var submitText = document.getElementById("submit-button");
+  if(isChecked === true) {
+    submitText.innerHTML = "Subscribe";
+  } else {
+    submitText.innerHTML = "Join";
+  }
+}
+
 function loaded() {
   console.log("Contact form submission handler loaded successfully.");
   // bind to the submit event of our form
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
+  var emailOnlyCheckBox = document.getElementById("email-only");
+  emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
+
+window.onload = function(e) {
+  document.getElementById("warning").style.display = "none";
+}
