@@ -120,9 +120,9 @@ function handleEmailOnlyCheckBox() {
   
   var submitText = document.getElementById("submit-button");
   if(isChecked === true) {
-    submitText.innerHTML = "Subscribe <i class="zmdi zmdi-arrow-right m-l-8"></i>";
+    submitText.innerHTML = "Subscribe <i class=\"zmdi zmdi-arrow-right m-l-8\"></i>";
   } else {
-    submitText.innerHTML = "Join <i class="zmdi zmdi-arrow-right m-l-8"></i>";
+    submitText.innerHTML = "Join <i class=\"zmdi zmdi-arrow-right m-l-8\"></i>";
   }
 }
 
