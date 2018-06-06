@@ -70,7 +70,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     return false;
   }
   
-
   if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
     var invalidEmail = document.getElementById("email-invalid");
     if (invalidEmail) {
@@ -132,6 +131,28 @@ function loaded() {
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
   var emailOnlyCheckBox = document.getElementById("email-only");
-  emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
+  if(emailOnlyCheckBox) {
+    emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
+  }
+  loadSchoolSuggestions.then(function(suggestionNodes) {
+    for(var i = 0; i < suggestionNodes.length; i++) {
+      var datalist = document.getElementById("schools");
+      console.log(datalist);
+      datalist.appendChild(suggestionNode[i]);
+    }
+  }
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
+
+function loadSchoolSuggestions() {
+  return new Promise(function(resolve, reject)) {
+    var suggestionNodes = [];
+    for(var i = 0; i < schools.length; i++) {
+      var node = document.createElement("OPTION");
+      node.setAttribute("value", schools[i]);
+      suggestionNodes.push(node);
+      console.log(node);
+    }
+    resolve(suggestionNodes);
+  }
+}
