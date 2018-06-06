@@ -134,7 +134,7 @@ function loaded() {
   if(emailOnlyCheckBox) {
     emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
   }
-  loadSchoolSuggestions.then(function(suggestionNodes) {
+  loadSchoolSuggestions().then(function(suggestionNodes) {
     for(var i = 0; i < suggestionNodes.length; i++) {
       var datalist = document.getElementById("schools");
       console.log(datalist);
