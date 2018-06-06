@@ -145,7 +145,7 @@ function loaded() {
 document.addEventListener("DOMContentLoaded", loaded, false);
 
 function loadSchoolSuggestions() {
-  return new Promise(function(resolve, reject)) {
+  return new Promise(function(resolve, reject) {
     var suggestionNodes = [];
     for(var i = 0; i < schools.length; i++) {
       var node = document.createElement("OPTION");
@@ -154,5 +154,5 @@ function loadSchoolSuggestions() {
       console.log(node);
     }
     resolve(suggestionNodes);
-  }
+  });
 }
