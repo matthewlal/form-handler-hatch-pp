@@ -140,7 +140,7 @@ function loaded() {
       console.log(datalist);
       datalist.appendChild(suggestionNode[i]);
     }
-  }
+  });
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
 
