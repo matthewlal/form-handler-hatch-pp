@@ -127,6 +127,7 @@ function handleEmailOnlyCheckBox() {
 
 function loaded() {
   console.log("Contact form submission handler loaded successfully.");
+  console.log("SCHOOLS:" schools);
   // bind to the submit event of our form
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
