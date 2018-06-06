@@ -152,7 +152,7 @@ function loadSchoolSuggestions() {
       var node = document.createElement("OPTION");
       node.setAttribute("value", schools[i]);
       suggestionNodes.push(node);
-      console.log(node);
+      console.log("suggestionNodes: " + suggestionNodes);
     }
     resolve(suggestionNodes);
   });
