@@ -127,7 +127,6 @@ function handleEmailOnlyCheckBox() {
 
 function loaded() {
   console.log("Contact form submission handler loaded successfully.");
-  console.log("SCHOOLS:" + schools);
   // bind to the submit event of our form
   var form = document.getElementById("gform");
   form.addEventListener("submit", handleFormSubmit, false);
@@ -135,25 +134,5 @@ function loaded() {
   if(emailOnlyCheckBox) {
     emailOnlyCheckBox.addEventListener("click", handleEmailOnlyCheckBox, false);
   }
-  loadSchoolSuggestions().then(function(suggestionNodes) {
-    for(var i = 0; i < suggestionNodes.length; i++) {
-      var datalist = document.getElementById("schools");
-      console.log(datalist);
-      datalist.appendChild(suggestionNode[i]);
-    }
-  });
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
-
-function loadSchoolSuggestions() {
-  return new Promise(function(resolve, reject) {
-    var suggestionNodes = [];
-    for(var i = 0; i < schools.length; i++) {
-      var node = document.createElement("OPTION");
-      node.setAttribute("value", schools[i]);
-      suggestionNodes.push(node);
-      console.log("suggestionNodes: " + suggestionNodes);
-    }
-    resolve(suggestionNodes);
-  });
-}
