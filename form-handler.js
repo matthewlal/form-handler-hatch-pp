@@ -120,13 +120,16 @@ function handleEmailOnlyCheckBox() {
   var submitText = document.getElementById("submit-button");
   var schoolDataListComponent = document.getElementById("school-list-suggest-component");
   var schoolInput = document.getElementById("school");
+  var schoolInputLabel = document.getElementById("label-school-list-suggest-component");
   if(isChecked === true) {
     submitText.innerHTML = "Subscribe <i class=\"zmdi zmdi-arrow-right m-l-8\"></i>";
     schoolInput.value = "";
     schoolDataListComponent.style.display = "none";
+    schoolInputLabel.style.display = "none";
   } else {
     submitText.innerHTML = "Join <i class=\"zmdi zmdi-arrow-right m-l-8\"></i>";
     schoolDataListComponent.style.display = "block";
+    schoolInputLabel.style.display = "block";
   }
 }
 
